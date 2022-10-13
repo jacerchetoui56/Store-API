@@ -1,0 +1,87 @@
+openapi: 3.0.0
+info:
+  title: Store API
+  contact: {}
+  version: "1.0"
+servers:
+  - url: https://store-api-jacer.herokuapp.com/
+    variables: {}
+paths:
+  /products:
+    get:
+      tags:
+        - Main
+      summary: Get all products
+      operationId: Getallproducts
+      parameters:
+        - name: name
+          in: query
+          description: ""
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+
+        - name: featured
+          in: query
+          description: ""
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: boolean
+        - name: company
+          in: query
+          description: ""
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: fields
+          in: query
+          description: ""
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: limit
+          in: query
+          description: ""
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            format: int32
+        - name: sort
+          in: query
+          description: ""
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: numericFilter
+          in: query
+          description: ""
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+            example: price>30,rating>=4
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      deprecated: false
+      security: []
+      servers:
+        - url: https://store-api-jacer.herokuapp.com/
+          variables: {}
+tags:
+  - name: Main
+    description: ""
