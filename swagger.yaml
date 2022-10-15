@@ -80,7 +80,7 @@ paths:
       deprecated: false
       security: []
       servers:
-        - url: https://store-api-jacer.herokuapp.com/
+        - url: https://store-api-jacer.herokuapp.com/api/v1
           variables: {}
 tags:
   - name: Main
